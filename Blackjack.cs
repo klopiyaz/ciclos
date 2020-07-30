@@ -22,13 +22,14 @@ namespace ConsoleApp45
             total = carta + carta2;
             Console.Write("\nllevas = " + total);
 
-            while (sumacartas < 21)
+            bool A = false;
+
+            while (sumacartas < 21 && A!= true)
             {
                 Console.WriteLine(" \nOtra carta? (s/n): ");
                 otracarta = Console.ReadLine();
                 if (otracarta == "s")
                 {
-
                     cartaAd = aleatorio.Next(1, 11);
                     Console.WriteLine(" Carta Adicional = " + cartaAd);
                     total = cartaAd + total;
@@ -36,17 +37,16 @@ namespace ConsoleApp45
 
                     if (total > 21)
                     {
-                        total = 0;
                         Console.WriteLine(" (Pierdes)");
+                        otracarta = "n";
+                        A = true;
                     }
                     else if (total == 21)
                     {
                         total = 21;
                         Console.WriteLine(" (Ganas)");
-                    }
-                    else
-                    {
-                        Console.WriteLine("");
+                        otracarta = "n";
+                        A = true;
                     }
                 }
                 if (otracarta == "n")

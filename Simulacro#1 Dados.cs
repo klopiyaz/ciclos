@@ -45,6 +45,7 @@ namespace simulacro
                     {
                         total = 0;
                         Console.WriteLine("\n  (Eliminado)");
+                        A = true;
                     }
                     else if (total == 100 || total > 100)
                     {

@@ -52,6 +52,7 @@ namespace ConsoleApp45
                 if (otracarta == "n")
                 {
                     Console.WriteLine("total = " + total);
+                    A = true;
                 }
             }
         }

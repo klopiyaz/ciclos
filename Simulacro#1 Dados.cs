@@ -27,6 +27,7 @@ namespace simulacro
             {
                 total = 0;
                 Console.WriteLine("\n  (Eliminado)");
+                A = true;
             }
             while (A != true && dado1 != 1 && dado2 != 1)
             {

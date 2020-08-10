@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2do_trabajo_en_casa
+namespace _2do_trabajo_casa
 {
     class Program
     {
@@ -21,11 +21,11 @@ namespace _2do_trabajo_en_casa
 
             bool A = false;
 
-            while( A != true)
+            while (A != true)
             {
                 Console.Write(" \n\nQuiere continuar? (s/n): ");
                 continuar = Console.ReadLine();
-                if(continuar == "s")
+                if (continuar == "s")
                 {
                     contadorperdidadevidas++;
                     contadordadoscadatresturnos++;
@@ -43,19 +43,21 @@ namespace _2do_trabajo_en_casa
                     {
                         vidas = 0;
                         Console.WriteLine("\n (Eliminado)");
-                        A = true;
+                        break;
                     }
                     else if (total >= 100)
                     {
                         total = +total;
                         Console.WriteLine("\n (Ganas)");
-                        A = true;
+                        break;
                     }
                     if (contadordadoscadatresturnos == 3)
                     {
-                        dadocadatresturno1 = aleatorio.Next(1, 7);
-                        dadocadatresturno2 = aleatorio.Next(1, 7);
-                        Console.WriteLine("\nDado por 3 turnos = " + dadocadatresturno1+"    Dado por 3 turnos = " + dadocadatresturno2);
+                        //dadocadatresturno1 = aleatorio.Next(1, 7);
+                        //dadocadatresturno2 = aleatorio.Next(1, 7);
+                        dadocadatresturno1 = int.Parse(Console.ReadLine());
+                        dadocadatresturno2 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("\nDado por 3 turnos = " + dadocadatresturno1 + "    Dado por 3 turnos = " + dadocadatresturno2);
                         total = total + dadocadatresturno1 + dadocadatresturno2;
                         Console.WriteLine("\nllevas = " + total);
                         if (dadocadatresturno1 == dadocadatresturno2)
@@ -73,7 +75,7 @@ namespace _2do_trabajo_en_casa
                 if (continuar == "n")
                 {
                     Console.WriteLine("\nAcumulado = " + total);
-                    A = true;
+                    break;
                 }
             }
         }

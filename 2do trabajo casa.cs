@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2do_trabajo_casa
+namespace ConsoleApp58
 {
     class Program
     {
@@ -33,7 +33,7 @@ namespace _2do_trabajo_casa
                     Console.WriteLine("\ndadoAd = " + dadoAd);
                     total += dadoAd;
                     Console.WriteLine("\nllevas = " + total);
-                    if (contadorperdidadevidas == 2)
+                    if (contadorperdidadevidas % 2 == 0)
                     {
                         vidas -= 1;
                         Console.WriteLine("vidas = " + vidas);
@@ -81,3 +81,4 @@ namespace _2do_trabajo_casa
         }
     }
 }
+

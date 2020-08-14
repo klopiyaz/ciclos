@@ -17,7 +17,7 @@ namespace ConsoleApp53
             Console.Write("Ingrese el numero de jugadores = ");
             int jugadores = int.Parse(Console.ReadLine());
 
-            while (jugadores == 0 || jugadores > 5)
+            while (jugadores > 2 || jugadores > 5)
             {
                 Console.WriteLine("No se puede jugar con ese numero de jugadores");
                 Console.Write("Ingrese el numero de jugadores = ");

@@ -37,7 +37,6 @@ namespace ConsoleApp58
                     {
                         vidas -= 1;
                         Console.WriteLine("vidas = " + vidas);
-                        contadorperdidadevidas = 0;
                     }
                     if (vidas == 0)
                     {
